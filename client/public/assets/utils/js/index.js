@@ -1,7 +1,7 @@
 /* Script Swiper */
 
 const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 30,
     slidesPerGroup: 3,
     loopFillGroupWithBlank: true,
@@ -13,6 +13,20 @@ const swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        800: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+    }
 });
 
 

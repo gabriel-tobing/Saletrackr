@@ -75,6 +75,7 @@ button {
     left: 0;
     right: 0;
     z-index: 10;
+    width: 100%;
     padding: 1rem 2rem;
     background-color: var(--white-color);
     transition: 0.3s;
@@ -134,9 +135,12 @@ button {
 
 .footer-container .footer-content {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
     flex-wrap: wrap;
+}
+
+.footer-container .footer-content .footer-content-inner {
+    flex: 0 0 auto;
+    width: 25%;
 }
 
 .footer-container .footer-content .footer-content-inner .logo-container .logo {
@@ -171,35 +175,7 @@ button {
 }
 
 .footer-container .footer-content .footer-content-inner .footer-list .footer-item .footer-link:hover {
-    color: var(--primary-color);
-}
-
-.footer-container .footer-content .footer-content-inner .form-container .form-input {
-    padding: 0.5rem 1rem;
-    background-color: var(--white-color);
-    border-radius: 0.25rem;
-    color: var(--black-color);
-    font-family: var(--font-poppins);
-    font-size: 0.83rem;
-    font-weight: var(--fw-regular);
-}
-
-.footer-container .footer-content .footer-content-inner .form-container .form-input::placeholder {
-    color: rgba(0, 18, 83, 0.5);
-    font-family: var(--font-poppins);
-    font-size: 0.83rem;
-    font-weight: var(--fw-regular);
-}
-
-.footer-container .footer-content .footer-content-inner .form-container .submit-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: var(--secondary-color);
-    border-radius: 0.25rem;
-    color: var(--white-color);
-    font-family: var(--font-poppins);
-    font-size: 0.83rem;
-    font-weight: var(--fw-medium);
+    color: var(--secondary-color);
 }
 
 .footer-container .copyright-container {
@@ -214,6 +190,8 @@ button {
     font-family: var(--font-poppins);
     font-size: 0.87rem;
     font-weight: var(--fw-regular);
+    letter-spacing: 1%;
+    text-align: center;
 }
 
 .footer-container .copyright-container .copyright .current-year {
@@ -222,9 +200,76 @@ button {
 
 .footer-container .copyright-container .copyright .logo {
     color: var(--primary-color);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-semibold);
 }
 
 .footer-container .copyright-container .copyright .logo span {
     color: var(--secondary-color);
+}
+
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .footer-container .footer-content {
+        gap: 1rem 0;
+    }
+    .footer-container .footer-content .footer-content-inner:first-child {
+        width: 33.33333333%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:nth-child(2) {
+        width: 33.33333333%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:nth-child(3) {
+        width: 33.33333333%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer-container .footer-content .footer-content-inner:first-child {
+        width: 50%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:nth-child(2) {
+        width: 50%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:nth-child(3) {
+        width: 50%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:last-child {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar-container {
+        padding: 1rem;
+    }
+
+    .navbar-container .navbar-content .navbar-content-right .navbar-list {
+        /* display: none; */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer-container .footer-content .footer-content-inner:first-child {
+        width: 100%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:nth-child(2) {
+        width: 100%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:nth-child(3) {
+        width: 100%;
+    }
+
+    .footer-container .footer-content .footer-content-inner:last-child {
+        width: 100%;
+    }
 }
